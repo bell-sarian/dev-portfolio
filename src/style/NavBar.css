@@ -1,0 +1,29 @@
+.menuBarContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+
+    background-color: #131313f3;
+    /* background: blur(5px);     */
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin-bottom: 100px;
+    z-index: 9999;
+
+}
+
+.menuBarContainer .navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px;
+    color: #fff;
+    
+}

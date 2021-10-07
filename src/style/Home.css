@@ -1,0 +1,93 @@
+.HomeContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #131313;
+}
+
+.HomeContainer .content {
+  font-size: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.HomeContainer .content .leftText {
+  text-align: left;
+  /* margin: 30px; */
+}
+
+.HomeContainer .content .leftText .name {
+  font-size: 150px;
+  letter-spacing: 0.355em;
+  font-family: 'Ramabhadra', sans-serif;
+  color: #efefef;
+  font-weight: 700;
+}
+
+.HomeContainer .content .leftText .tags {
+  font-size: 24px;
+  /* line-height: 32px; */
+  font-family: 'Red Hat Text', sans-serif;
+  color: #efefef;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* font-weight: 700; */
+}
+
+.HomeContainer .content .leftText .tags .tag1 {
+  margin-right: 30px;
+}
+
+.HomeContainer .content .leftText .tags .tag2,
+.HomeContainer .content .leftText .tags .tag3 {
+  /* margin-left: 10px; */
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.HomeContainer .content .right {
+  background-color: #d28ccf44;
+  width: 330px;
+  height: 600px;
+  margin-left: 150px;
+  transition: 0.3s ease-in-out;
+
+  /* background: rgba( 240, 137, 248, 0.15 ); */
+  background: rgba(210, 140, 207, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border-radius: 10px;
+  /* border-radius: 10px; */
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+
+.HomeContainer .content .right img {
+  height: 600px;
+  width: auto;
+  margin-left: 20px;
+  margin-top: 20px;
+  transition: 0.2s ease-in-out;
+  box-shadow: -10px -10px 15px #44444441;
+  border-radius: 10px;
+}
+
+.HomeContainer .content .right:hover {
+  transform: scale(1.1);
+  transform: translate(10px, 10px);
+}
+
+.HomeContainer .content .right img:hover {
+  transform: scale(1.025);
+  transform: translate(5px, 5px);
+  /* transform: translate(0, ); */
+}

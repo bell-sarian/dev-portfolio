@@ -1,0 +1,102 @@
+.container {
+  /* background-color: blue; */
+  display: flex;
+  height: 900px;
+  overflow: scroll;
+}
+
+.sub-container {
+  /* background-color: red; */
+  /* background: red;
+  border: 1px solid yellow; */
+  height: 900px;
+}
+
+.circular-text {
+  position: sticky;
+  top: 23%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  color: rgba(225, 225, 225, 0);
+  font-size: 24px;
+  font-weight: bolder;
+  color: white;
+  font-family: 'Ramabhadra', sans-serif;
+  transition: 0.5s ease-out;
+  -webkit-text-stroke: 1px rgba(225, 225, 225, 0.6);
+}
+
+.circular-text {
+  @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 6em); 
+
+  /* position: relative; */
+  /* background-color: white; */
+  border: 10px solid rgb(137,137,137);
+  /* border-image: linear-gradient(to right, rgb(23, 23, 34), darkorchid) 1; */
+  font-family: 'Red Hat Text', sans-serif;
+  color: #fff;
+  font-size: 60px ;
+  border-radius: 100%;
+  padding: 10px;
+  /* box-shadow: 0 0 30px rgba(153, 100, 184, 0.493); */
+  width: 1400px;
+  height: 1400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  rotate: -90deg;
+
+}
+
+.circular-text span{
+  position: absolute;
+  transform-origin: 00% 00%;
+}
+.ray {
+  display: flex;
+  /* border: 1px solid red; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.lang {
+  margin-left: 20px;
+  font-family: 'Red Hat Text', sans-serif;
+
+}
+
+.circular-text .ray:nth-child(1) {
+  transform: rotate(90deg) translate(-260px);
+}
+.circular-text .ray:nth-child(2) {
+  transform: rotate(117deg) translate(-300px);
+}
+.circular-text .ray:nth-child(3) {
+  transform: rotate(144deg) translate(-465px);
+}
+.circular-text .ray:nth-child(4) {
+  transform: rotate(171deg) translate(0px);
+}
+.circular-text .ray:nth-child(5) {
+  transform: rotate(198deg) translate(0px);
+}
+.circular-text .ray:nth-child(6) {
+  transform: rotate(225deg) translate(0px);
+}
+.circular-text .ray:nth-child(7) {
+  transform: rotate(252deg) translate(0px);
+}
+.circular-text .ray:nth-child(8) {
+  transform: rotate(279deg) translate(0px);
+}
+.circular-text .ray:nth-child(9) {
+  transform: rotate(306deg) translate(0px);
+}
+.circular-text .ray:nth-child(10) {
+  transform: rotate(333deg) translate(0px);
+}
+.circular-text .ray:nth-child(11) {
+  transform: rotate(360deg) translate(0px);
+}

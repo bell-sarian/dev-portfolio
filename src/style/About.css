@@ -1,0 +1,51 @@
+.AboutContainer {
+    font-size: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 300px;
+    overflow: hidden;
+}
+
+.AboutContainer .leftText {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 50%;
+    margin: 100px;
+}
+
+.AboutContainer .leftText .header {
+    font-size: 150px;
+    letter-spacing: 0.355em;
+    font-family: 'Ramabhadra', sans-serif;
+    color: #EFEFEF;
+    font-weight: 700;
+}
+
+.AboutContainer .leftText .description {
+    /* width: 50%; */
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: #EFEFEF;
+
+}
+
+.AboutContainer .leftText .description  .name {
+    color: #D28CCF;
+}
+
+.AboutContainer .wheelContainer {
+    width: 100%;
+    margin-right: 10px;;
+    /* margin: 150px; */
+    /* border: 1px solid red; */
+}
