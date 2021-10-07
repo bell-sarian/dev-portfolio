@@ -4,7 +4,7 @@ import MaterialIcon, { colorPalette } from "material-icons-react";
 import { ScrollRotate } from "react-scroll-rotate";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import WebFont from "webfontloader";
-import "animate.css/animate.min.css";
+// import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import ReactFloaterJs from "react-floaterjs";
 
