@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import Styles from "../style/About.css";
+import Styles from "./About.css";
 import MaterialIcon, { colorPalette } from "material-icons-react";
 import { ScrollRotate } from "react-scroll-rotate";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import WebFont from "webfontloader";
 import AboutSquares from "./AboutSquares.js";
-import ScrollWheel from "./ScrollWheel.js";
+// import ScrollWheel from "../ScrollWheel/ScrollWheel.js";
+// import Wheel from "../Wheel/Wheel.js";
+// import RadialMenu from "../RadialMenu/RadialMenu.js";
+import LanguageMenu from "../LanguageMenu/LanguageMenu";
 
 WebFont.load({
   google: {
@@ -16,17 +19,7 @@ WebFont.load({
 export default class About extends Component {
   state = {
     currentIndex: 0,
-    languages: [
-      "React",
-      "Javascript",
-      "HTML",
-      "CSS",
-      "Python",
-      "React Native",
-      "C++",
-      "Java",
-      "Linux",
-    ],
+    value: 0,
   };
 
   nextIndex = () => {
@@ -53,6 +46,12 @@ export default class About extends Component {
     });
   };
 
+  handleChange = (newValue) => {
+    this.setState({
+      value: newValue,
+    });
+  };
+
   render() {
     const { languages, currentIndex } = this.state;
     return (
@@ -71,7 +70,20 @@ export default class About extends Component {
 
         <div class="wheelContainer">
           {/* <AboutSquares></AboutSquares> */}
-          <ScrollWheel></ScrollWheel>
+          {/* <ScrollWheel></ScrollWheel> */}
+          {/* <Wheel></Wheel> */}
+          {/* <Wheel
+            size={1000}
+            numTicks={11}
+            degrees={360}
+            min={1}
+            max={11}
+            // value={30}
+            // color={true}
+            onChange={this.handleChange}
+          /> */}
+          {/* <RadialMenu /> */}
+          <LanguageMenu />
         </div>
       </div>
     );

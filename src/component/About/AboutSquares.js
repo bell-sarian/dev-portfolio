@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Styles from "../style/AboutSquares.css";
+import Styles from "./AboutSquares.css";
 import MaterialIcon, { colorPalette } from "material-icons-react";
 import { ScrollRotate } from "react-scroll-rotate";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";

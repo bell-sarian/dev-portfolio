@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Styles from "../style/Home.css";
+import Styles from "./Home.css";
 import MaterialIcon, { colorPalette } from "material-icons-react";
-import headshot from "../assets/IMG_4582.JPG";
+import headshot from "../../assets/IMG_4582.JPG";
 
 import WebFont from "webfontloader";
 
