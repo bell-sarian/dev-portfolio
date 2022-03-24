@@ -29,30 +29,25 @@ function Card(props) {
         ...styles.card,
         left: `${props.center.x + coord.x}px`,
         top: `${props.center.y - coord.y}px`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "right",
+        // flexDireaction: "row",
+        // justifyContent: "left",
       }}
     >
-      {/* <img
-        src={`https://picsum.photos/${200 + parseInt(props.no)}`}
-        style={{
-          // width: "100%",
-          // height: "100%",
-          borderRadius: "50%",
-          boxShadow: "10px 10px 8px black",
-        }}
-        alt="pic"
-      /> */}
       <div
         style={{
           marginRight: "20px",
-          width: "50px",
+          // width: "500px",
           // textAlign: "left",
-          display: "flex",
-          flexDireaction: "row",
         }}
       >
         {language[props.card_index]}
-        {/* <div style={{ ...styles.dot }}></div> */}
       </div>
+      <div style={{ ...styles.dot }}></div>
+      {console.log("rad" + props.radius)}
+      {console.log("id" + props.id)}
     </div>
   );
 }
@@ -66,16 +61,21 @@ const styles = {
     left: "500%",
     transform: "translate( -50%, -50%) rotate(90deg)",
     height: "50px",
-    width: "50px",
+    width: "300px",
     // backgroundColor: "blue",
     borderRadius: "50%",
+    // display: "flex",
+    // border: "1px solid red",
+    overflow: "visible",
+    fontSize: "30px",
   },
   dot: {
-    height: "50px",
-    width: "50px",
-    backgroundColor: "grey",
-    marginLeft: "30px",
+    height: "20px",
+    width: "20px",
+    backgroundColor: "#D28CCF",
+    // marginLeft: "30px",
     borderRadius: "50%",
+    marginRight: "10px",
   },
 };
 

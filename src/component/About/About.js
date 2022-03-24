@@ -69,22 +69,9 @@ export default class About extends Component {
         </div>
 
         <div class="wheelContainer">
-          {/* <AboutSquares></AboutSquares> */}
-          {/* <ScrollWheel></ScrollWheel> */}
-          {/* <Wheel></Wheel> */}
-          {/* <Wheel
-            size={1000}
-            numTicks={11}
-            degrees={360}
-            min={1}
-            max={11}
-            // value={30}
-            // color={true}
-            onChange={this.handleChange}
-          /> */}
-          {/* <RadialMenu /> */}
           <LanguageMenu />
         </div>
+        {/* <div className="gradient-circle"></div> */}
       </div>
     );
   }

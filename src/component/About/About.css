@@ -50,3 +50,17 @@
     /* margin: 150px; */
     /* border: 1px solid red; */
 }
+
+.gradient-circle {
+    background: -webkit-linear-gradient(left , rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);
+    width: 720px;
+    height: 790px;
+    border-radius: 1000px;
+    padding: 10px;
+
+    display: flex;
+    position: absolute;
+    margin-top: 10px;
+    right: -370px;
+    z-index: 1;
+}
