@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Text, View, PanResponder, Animated, Dimensions } from "react-native";
 import styled from "styled-components";
-import Card from "./Card";
+import Card from "../src/component/LanguageMenu/Card";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 

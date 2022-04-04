@@ -1,6 +1,5 @@
 import React from "react";
 
-import Lang from "./Lang.js";
 const language = [
   "React",
   "Javascript",
@@ -46,8 +45,8 @@ function Card(props) {
         {language[props.card_index]}
       </div>
       <div style={{ ...styles.dot }}></div>
-      {console.log("rad" + props.radius)}
-      {console.log("id" + props.id)}
+      {/* {console.log("rad" + props.radius)}
+      {console.log("id" + props.id)} */}
     </div>
   );
 }
@@ -59,7 +58,7 @@ const styles = {
     position: "absolute",
     top: "200%",
     left: "500%",
-    transform: "translate( -50%, -50%) rotate(90deg)",
+    transform: "translate( -50%, -50%) rotate(0deg)",
     height: "50px",
     width: "300px",
     // backgroundColor: "blue",

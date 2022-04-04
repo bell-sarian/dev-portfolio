@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect, useRef } from "react";
 import Card from "./Card.js";
 import { Draggable } from "gsap/Draggable";
 import { gsap } from "gsap";
+import "./LanguageMenu.css";
 
 gsap.registerPlugin(Draggable);
 
@@ -18,6 +19,9 @@ export default function LanguageMenu() {
   const dragTarget = useRef(null);
   let temp_theta = 0.0;
   let anim_id = null;
+
+  var previousRotation = 0;
+  var cardPreviousRotation = 0;
 
   const gaussFunc = (x, sigma, mu) => {
     return (
@@ -50,22 +54,14 @@ export default function LanguageMenu() {
       setCards(temp_cards);
       console.log("temp cards" + temp_cards[0]);
 
-      var rotationSnap = 100;
-      dragInstance.current = Draggable.create(dragTarget.current, {
+      Draggable.create(dragTarget.current, {
         type: "rotation",
-        // inertia: true,
-        // eslint-disable-next-line no-loop-func
-        // throwProps: true,
+
         liveSnap: true,
-        // bounds: {
-        //   minRotation: 0,
-        //   maxRotation: 316.8,
-        // },
+        throwProps: true,
         dragResistance: 0.35,
         edgeResistance: 0.8,
-        snap(endValue) {
-          return Math.round((endValue / rotationSnap) * rotationSnap);
-        },
+
         onDrag: handle_rotate,
         onDragEnd() {
           console.log(this);
@@ -76,17 +72,26 @@ export default function LanguageMenu() {
 
   const handle_rotate = (event) => {
     clearTimeout(anim_id);
-    let scroll_speed = (event.deltaY / 360) * 20;
-    temp_theta += 2;
-    // temp_theta += scroll_speed;
-
-    // console.log("styles " + styles.wheel.backgroundColor);
     const wheelStyle = document.querySelector(".draggable");
-    //  card = null;
+
+    var yourDraggable = Draggable.get(dragTarget.current);
+
+    temp_theta += 2;
+    var direction =
+      yourDraggable.rotation - previousRotation > 0
+        ? "clockwise"
+        : "couter-clockwise";
+    // console.log("styles " + styles.wheel.backgroundColor);
+
+    console.log(
+      "Direction: " + direction + ", angle: " + yourDraggable.rotation
+    );
 
     wheelStyle.style.transitionDelay = "0.0s";
     wheelStyle.style.transitionDuration = "0.0s";
-    wheelStyle.style.transform = `translate(-50%, -50%) rotate(${temp_theta}deg)`;
+    // wheelStyle.style.transform = `translate(-50%, -50%) rotate(${temp_theta}deg)`;
+
+    previousRotation = yourDraggable.rotation;
 
     for (let i = 0; i < wheelStyle.children.length; i++) {
       let id = "card-" + i;
@@ -95,16 +100,8 @@ export default function LanguageMenu() {
       wheelStyle.children[i].style.transitionDelay = "0.0s";
       wheelStyle.children[i].style.transitionDuration = "0.0s";
       wheelStyle.children[i].style.transform = `translate(-50%, -50%) rotate(${
-        -1.0 * temp_theta
+        -1.0 * previousRotation
       }deg)`;
-      console.log(
-        "child rad " + wheelStyle.children[i].radius + "\n rad " + radius
-      );
-      // if (card.radius == radius) {
-      //   wheelStyle.children[i].style.fontSize = "14px";
-      // }
-
-      // console.log("reached " + wheelStyle.children[i].rotation);
     }
 
     anim_id = setTimeout(() => {
@@ -113,13 +110,15 @@ export default function LanguageMenu() {
   };
 
   return (
-    <div
-      className="draggable"
-      onDrag={handle_rotate}
-      ref={dragTarget}
-      style={styles.wheel}
-    >
-      {cards}
+    <div className="draggable-container">
+      <div
+        className="draggable"
+        onDrag={handle_rotate}
+        ref={dragTarget}
+        style={styles.wheel}
+      >
+        {cards}
+      </div>
     </div>
   );
 }
@@ -129,7 +128,7 @@ const styles = {
     position: "absolute",
     top: "73%",
     right: "-650px",
-    transform: "translate( -50%, -50%) rotate(-90deg)",
+    transform: "translate( -50%, -50%) rotate(0deg)",
     height: "640px",
     width: "640px",
     // backgroundColor: "blue",
@@ -140,5 +139,6 @@ const styles = {
 
     borderRadius: "1000px",
     // overflowY: "hidden",
+    scrollbarWidth: "none",
   },
 };

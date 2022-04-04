@@ -71,7 +71,7 @@ export default class About extends Component {
         <div class="wheelContainer">
           <LanguageMenu />
         </div>
-        {/* <div className="gradient-circle"></div> */}
+        <div className="gradient-menu-square"></div>
       </div>
     );
   }

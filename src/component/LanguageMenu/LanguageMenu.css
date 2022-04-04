@@ -1,0 +1,12 @@
+.draggable::-webkit-scrollbar {
+    display: none;
+}
+
+.draggable {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.draggable-container {
+    height: 100%;
+}
