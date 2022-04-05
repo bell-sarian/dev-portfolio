@@ -146,5 +146,6 @@ const styles = {
     borderRadius: "50%",
     // overflowY: "hidden",
     scrollbarWidth: "none",
+    zIndex: "0",
   },
 };

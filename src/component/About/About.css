@@ -98,3 +98,11 @@
 .gradient-menu-square::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
+
+.menu-gradient {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 1200px;
+    right: 0px;
+    z-index: 10;
+}
