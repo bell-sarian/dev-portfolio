@@ -96,12 +96,18 @@ export default function LanguageMenu() {
     for (let i = 0; i < wheelStyle.children.length; i++) {
       let id = "card-" + i;
       const card = document.getElementById(id);
-      console.log("chew " + wheelStyle.children[i].color);
+      console.log("chew " + wheelStyle.children[i].radian_interval);
       wheelStyle.children[i].style.transitionDelay = "0.0s";
       wheelStyle.children[i].style.transitionDuration = "0.0s";
       wheelStyle.children[i].style.transform = `translate(-50%, -50%) rotate(${
         -1.0 * previousRotation
       }deg)`;
+
+      // if (i == 5 && previousRotation / 360 <= 0) {
+      //   wheelStyle.children[i].style.fontSize = "20px";
+      // } else {
+      //   wheelStyle.children[i].style.fontSize = "50px";
+      // }
     }
 
     anim_id = setTimeout(() => {
@@ -127,17 +133,17 @@ const styles = {
   wheel: {
     position: "absolute",
     top: "73%",
-    right: "-650px",
+    right: "-900px",
     transform: "translate( -50%, -50%) rotate(0deg)",
-    height: "640px",
-    width: "640px",
+    height: "870px",
+    width: "870px",
     // backgroundColor: "blue",
 
     transition: "transform 330ms, ease-in-out",
     border: "6px solid #EFEFEF",
     // borderImage: "linear-gradient(to right, #EFEFEF, #131313) 1",
 
-    borderRadius: "1000px",
+    borderRadius: "50%",
     // overflowY: "hidden",
     scrollbarWidth: "none",
   },

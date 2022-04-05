@@ -31,6 +31,7 @@ function Card(props) {
         display: "flex",
         alignItems: "center",
         justifyContent: "right",
+        "text-align": "right",
         // flexDireaction: "row",
         // justifyContent: "left",
       }}
@@ -45,28 +46,28 @@ function Card(props) {
         {language[props.card_index]}
       </div>
       <div style={{ ...styles.dot }}></div>
-      {/* {console.log("rad" + props.radius)}
-      {console.log("id" + props.id)} */}
+      {/* {/* {console.log("rad" + props.radius)} */}
+      {console.log("radian interval: " + props.radian_interval)}
     </div>
   );
 }
 
 const styles = {
   card: {
-    margin: "0",
-    padding: "0",
+    paddingRight: "250px",
+    // padding: "0",
     position: "absolute",
     top: "200%",
-    left: "500%",
+    right: "120%",
     transform: "translate( -50%, -50%) rotate(0deg)",
-    height: "50px",
-    width: "300px",
+    height: "100px",
+    width: "315px",
     // backgroundColor: "blue",
     borderRadius: "50%",
     // display: "flex",
     // border: "1px solid red",
     overflow: "visible",
-    fontSize: "30px",
+    fontSize: "40px",
   },
   dot: {
     height: "20px",
