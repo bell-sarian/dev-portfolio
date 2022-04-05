@@ -67,11 +67,13 @@ export default class About extends Component {
             Science from Azusa Pacific University in December 2020.
           </p>
         </div>
-
         <div class="wheelContainer">
           <LanguageMenu />
         </div>
-        <div className="gradient-menu-square"></div>
+        {/* <div className="gradient-menu-square"></div> */}
+        <div>
+          <img className="menu-gradient" alt="gradient" src="gradient.png" />
+        </div>
       </div>
     );
   }
