@@ -1,0 +1,100 @@
+.AboutContainer {
+    font-size: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 300px;
+    /* overflow: hidden; */
+}
+
+.AboutContainer .leftText {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 50%;
+    margin: 100px;
+    margin-right: 350px;
+}
+
+.AboutContainer .leftText .header {
+    font-size: 150px;
+    letter-spacing: 0.355em;
+    font-family: 'Ramabhadra', sans-serif;
+    color: #EFEFEF;
+    font-weight: 700;
+}
+
+.AboutContainer .leftText .description {
+    /* width: 50%; */
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: #EFEFEF;
+
+}
+
+.AboutContainer .leftText .description  .name {
+    color: #D28CCF;
+}
+
+.AboutContainer .wheelContainer {
+    width: 100%;
+    margin-right: 10px;;
+    /* margin: 150px; */
+    /* border: 1px solid red; */
+}
+
+.gradient-circle {
+    background: -webkit-linear-gradient(left , rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);
+    width: 720px;
+    height: 790px;
+    border-radius: 1000px;
+    padding: 10px;
+
+    display: flex;
+    position: absolute;
+    margin-top: 10px;
+    right: -370px;
+    z-index: 1;
+}
+
+.gradient-menu-square {
+    /* background: rgb(19,19,19);
+    background: linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    right: 0%;
+    width: 12%;
+    height: 1000px;
+    position: absolute; */
+
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0%;
+    width: 15%;
+    height: 40%;
+    background: -webkit-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: -webkit-linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: -moz-linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: -ms-linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: -o-linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    /* background: rgb(19,19,19);
+    background: linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%);  */
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+
+    ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+
+}
+
+.gradient-menu-square::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}

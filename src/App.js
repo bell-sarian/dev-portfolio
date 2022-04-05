@@ -3,9 +3,9 @@ import logo from "./logo.svg";
 import "./App.css";
 // import Style from "./style/App.css";
 
-import NavBar from "./component/NavBar.js";
-import Home from "./component/Home.js";
-import About from "./component/About.js";
+import NavBar from "./component/Navigation/NavBar.js";
+import Home from "./component/Home/Home.js";
+import About from "./component/About/About.js";
 
 class App extends Component {
   render() {

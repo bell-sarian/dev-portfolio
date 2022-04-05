@@ -1,0 +1,408 @@
+import React, { Component } from "react";
+import Styles from "../style/ScrollWheel.css";
+import CircleType from "circletype";
+
+export default class ScrollWheel extends Component {
+  circular() {
+    const CircleType = new CircleType(
+      document.getElementById("rotated")
+    ).radius(80);
+    window.scroll(function () {
+      var offset = window.scrollTop();
+      offset = offset * 0.4;
+
+      document.getElementsByClassName("circular-text").css({
+        "-moz-transfrom": "rotate(" + offset + "deg)",
+        "-webkit-transfrom": "rotate(" + offset + "deg)",
+        "-o-transfrom": "rotate(" + offset + "deg)",
+        "-ms-transfrom": "rotate(" + offset + "deg)",
+        transfrom: "rotate(" + offset + "deg)",
+      });
+    });
+  }
+  render() {
+    return (
+      <div className="container">
+        <div className="sub-container">
+          <div className="circular-text">
+            <span id="rotated">
+              React • JavaScript • HTML • CSS • React Native • Python • C/C++ •
+              Java • PHP • x86 Assembly • GraphQL
+            </span>
+          </div>
+        </div>
+        <script>this.circular</script>
+        <div>{this.circular}</div>
+      </div>
+    );
+  }
+}
+
+// NEXT
+
+import React, { useEffect, Component, useRef, useState } from "react";
+import { render } from "react-dom";
+import { gsap } from "gsap";
+import MaterialIcon, { colorPalette } from "material-icons-react";
+
+import { Draggable } from "gsap/Draggable";
+import Styles from "../style/ScrollWheel.css";
+import WebFont from "webfontloader";
+
+WebFont.load({
+  google: {
+    families: ["Ramabhadra", "sans-serif", "Red Hat Text"],
+  },
+});
+
+var rotationSnap = 36;
+gsap.registerPlugin(Draggable);
+
+// Calculates points arounds circle
+function calcPointsCirc(cx, cy, rad, dashLength) {
+  var n = rad / dashLength,
+    alpha = (Math.PI * 2) / n,
+    pointObj = {},
+    points = [],
+    i = -1;
+
+  while (i < n) {
+    var theta = alpha * i,
+      theta2 = alpha * (i + 1);
+
+    points.push({
+      x: Math.cos(theta) * rad + cx,
+      y: Math.sin(theta) * rad + cy,
+      ex: Math.cos(theta2) * rad + cx,
+      ey: Math.sin(theta2) * rad + cy,
+    });
+    i += 2;
+  }
+  return points;
+}
+
+export default function ScrollWheel() {
+  //   const [width, height] = useState(0);
+
+  const dragInstance = useRef(null);
+  const dragTarget = useRef(null);
+
+  const radius = 150,
+    diameter = radius * 2,
+    element = document.querySelector("#circular-text");
+
+  //   element.style.width = `${diameter}px`;
+  //   element.style.height = `${diameter}px`;
+  //   element.style.backgroundColor = "#sdf";
+
+  const textStyle = {
+    width: `${diameter}px`,
+    height: `${diameter}px`,
+    color: "red",
+    // height: "20px",
+  };
+
+  useEffect(() => {
+    dragInstance.current = Draggable.create(dragTarget.current, {
+      type: "rotation",
+      onDragEnd() {
+        console.log(this);
+      },
+    });
+  }, []);
+
+  return (
+    <div className="right-container">
+      {/* <h2>React & GSAP Draggable</h2> */}
+      <div className="languages">
+        <div className="lang1">React</div>
+        <div className="lang2">Javascript</div>
+        <div className="lang3">Python</div>
+        <div className="lang4">Java</div>
+        <div className="lang5">React Native</div>
+        <div className="lang6"></div>
+      </div>
+      <div className="draggable" ref={dragTarget}>
+        <div id="circular-text" className="circular-text" style={{ textStyle }}>
+          <div className="text-rays">
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">React</div>
+            </div>
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">Javascript</div>
+            </div>
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">Python</div>
+            </div>
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">React Native</div>
+            </div>
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">Java</div>
+            </div>
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">PHP</div>
+            </div>
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">C/C++</div>
+            </div>
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">Linux</div>
+            </div>
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">GraphQL</div>
+            </div>
+            <div className="ray">
+              <MaterialIcon
+                icon="circle"
+                color="#D28CCF"
+                size="35px"
+                class="lang-dot"
+              />
+              <div className="lang">Git</div>
+            </div>
+          </div>
+          {/* <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div> */}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+render(<ScrollWheel />, document.getElementById("root"));
+
+
+// KNOB
+import React, { Component, useRef, useEffect } from "react";
+import "./Wheel.css";
+import { gsap } from "gsap";
+import { Draggable } from "gsap/Draggable";
+
+export default class Wheel extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { deg: this.currentDeg };
+
+    this.fullAngle = props.degrees;
+    this.startAngle = 0;
+    // this.startAngle = (360 - props.degrees) / 2;
+    this.endAngle = 360;
+    // this.endAngle = this.startAngle + props.degrees;
+    this.margin = props.size * 0.15;
+    this.currentDeg = Math.floor(
+      this.convertRange(
+        props.min,
+        props.max,
+        this.startAngle,
+        this.endAngle,
+        props.value
+      )
+    );
+  }
+
+  startDrag = (e) => {
+    e.preventDefault();
+    const knob = e.target.getBoundingClientRect();
+    const pts = {
+      x: knob.left + knob.width / 2,
+      y: knob.top + knob.height / 2,
+    };
+    const moveHandler = (e) => {
+      this.currentDeg = this.getDeg(e.clientX, e.clientY, pts);
+      if (this.currentDeg === this.startAngle) this.currentDeg--;
+      let newValue = Math.floor(
+        this.convertRange(
+          this.startAngle,
+          this.endAngle,
+          this.props.min,
+          this.props.max,
+          this.currentDeg
+        )
+      );
+      this.setState({ deg: this.currentDeg });
+      this.props.onChange(newValue);
+    };
+    document.addEventListener("mousemove", moveHandler);
+    document.addEventListener("mouseup", (e) => {
+      document.removeEventListener("mousemove", moveHandler);
+    });
+  };
+
+  getDeg = (cX, cY, pts) => {
+    const x = cX - pts.x;
+    const y = cY - pts.y;
+    let deg = (Math.atan(y / x) * 180) / Math.PI;
+    if ((x < 0 && y >= 0) || (x < 0 && y < 0)) {
+      deg += 90;
+    } else {
+      deg += 270;
+    }
+    let finalDeg = Math.min(Math.max(this.startAngle, deg), this.endAngle);
+    console.log("deg", finalDeg);
+    return finalDeg;
+  };
+
+  convertRange = (oldMin, oldMax, newMin, newMax, oldValue) => {
+    return (
+      ((oldValue - oldMin) * (newMax - newMin)) / (oldMax - oldMin) + newMin
+    );
+  };
+
+  dcpy = (o) => {
+    return JSON.parse(JSON.stringify(o));
+  };
+
+  renderTicks = () => {
+    let ticks = [];
+    const incr = this.fullAngle / this.props.numTicks;
+    const size = this.margin + this.props.size / 2;
+    for (let deg = this.startAngle; deg <= this.endAngle; deg += incr) {
+      const tick = {
+        deg: deg,
+        tickStyle: {
+          height: size + 10,
+          left: size - 1,
+          top: size + 2,
+          transform: "rotate(" + deg + "deg)",
+          transformOrigin: "top",
+          TextAlign: "right",
+        },
+        lang: "react",
+      };
+      ticks.push(tick);
+    }
+    return ticks;
+  };
+
+  render() {
+    let kStyle = {
+      width: this.props.size,
+      height: this.props.size,
+    };
+    let iStyle = this.dcpy(kStyle);
+    let oStyle = this.dcpy(kStyle);
+    oStyle.margin = this.margin;
+    // if (this.props.color) {
+    //   oStyle.backgroundImage =
+    //     "radial-gradient(100% 70%,hsl(290, " +
+    //     this.currentDeg +
+    //     "%, " +
+    //     this.currentDeg / 5 +
+    //     "%),hsl(" +
+    //     Math.random() * 100 +
+    //     ",20%," +
+    //     this.currentDeg / 36 +
+    //     "%))";
+    // }
+    iStyle.transform = "rotate(" + this.state.deg + "deg)";
+
+    return (
+      <div className="knob" style={kStyle}>
+        <div className="ticks">
+          {this.props.numTicks
+            ? this.renderTicks().map((tick, i) => (
+                <div
+                  key={i}
+                  className={
+                    "tick" + (tick.deg <= this.currentDeg ? " active" : "")
+                  }
+                  style={tick.tickStyle}
+                >
+                  {/* <div className="language">{tick.lang}</div> */}
+                </div>
+              ))
+            : null}
+        </div>
+        <div className="knob outer" style={oStyle} onMouseDown={this.startDrag}>
+          <div className="knob inner" style={iStyle}>
+            <div className="grip" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+Wheel.defaultProps = {
+  size: 150,
+  min: 10,
+  max: 30,
+  numTicks: 0,
+  degrees: 270,
+  value: 0,
+};
+
+function Spin() {
+  const dragInstance = useRef(null);
+  const dragTarget = useRef(null);
+  useEffect(() => {
+    var rotationSnap = 90;
+    dragInstance.current = Draggable.create(dragTarget.current, {
+      type: "rotation",
+      inertia: true,
+      liveSnap: function (endValue) {
+        return Math.round((endValue / rotationSnap) * rotationSnap);
+      },
+      onDragEnd() {
+        console.log(this);
+      },
+    });
+  }, []);
+}
