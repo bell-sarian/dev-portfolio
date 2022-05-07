@@ -10,3 +10,53 @@
 .draggable-container {
     height: 100%;
 }
+
+.gradient-menu-square {
+    /* background: rgb(19,19,19);
+    background: linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    right: 0%;
+    width: 12%;
+    height: 1000px;
+    position: absolute; */
+
+    /* border: 1px solid red; */
+    position: absolute;
+    top: -600px;
+    right: 0%;
+    width: 15%;
+    height: 100vh;
+    /* background: -webkit-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: -webkit-linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: -moz-linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: -ms-linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: -o-linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%); 
+    background: linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%);  */
+    background: rgb(19,19,19);
+    /* background: linear-gradient(90deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%);  */
+    background: linear-gradient( -90deg,
+        #131313 0%,
+        #131313bc 19%,
+        #1313138a 34%,
+        #13131361 47%,
+        #13131347 56.5%,
+        #13131331 65%,
+        #13131320 73%,
+        #13131313 80.2%,
+        #1313130b 86.1%,
+        #13131305 91%,
+        #13131302 95.2%,
+        #13131301 98.2%,
+        #13131300 100%
+      );;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+
+    ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+
+}
+
+.gradient-menu-square::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}

@@ -53,7 +53,7 @@ export default function ScrollWheel() {
             icon="circle"
             color="#D28CCF"
             size="45px"
-            class="lang-dot"
+            className="lang-dot"
           />
           {/* <div className="lang">React</div> */}
         </div>
@@ -83,15 +83,15 @@ export default function ScrollWheel() {
                     icon="circle"
                     color="#D28CCF"
                     size="35px"
-                    class="lang-dot"
+                    className="lang-dot"
                   />
                 </div>
               );
             })}
           </div>
-          {/* <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div> */}
+          {/* <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div> */}
         </div>
       </div>
     </div>

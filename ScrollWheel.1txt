@@ -130,7 +130,7 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">React</div>
             </div>
@@ -139,7 +139,7 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">Javascript</div>
             </div>
@@ -148,7 +148,7 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">Python</div>
             </div>
@@ -157,7 +157,7 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">React Native</div>
             </div>
@@ -166,7 +166,7 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">Java</div>
             </div>
@@ -175,7 +175,7 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">PHP</div>
             </div>
@@ -184,7 +184,7 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">C/C++</div>
             </div>
@@ -193,7 +193,7 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">Linux</div>
             </div>
@@ -202,7 +202,7 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">GraphQL</div>
             </div>
@@ -211,14 +211,14 @@ export default function ScrollWheel() {
                 icon="circle"
                 color="#D28CCF"
                 size="35px"
-                class="lang-dot"
+                className="lang-dot"
               />
               <div className="lang">Git</div>
             </div>
           </div>
-          {/* <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div> */}
+          {/* <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div> */}
         </div>
       </div>
     </div>

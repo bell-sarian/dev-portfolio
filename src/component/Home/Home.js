@@ -14,31 +14,31 @@ WebFont.load({
 export default class Home extends Component {
   render() {
     return (
-      <div class="HomeContainer">
-        <div class="content">
-          <div class="leftText">
-            <div class="name">BELL</div>
-            <div class="tags">
-              <div class="tag1">Full Stack</div>
+      <div className="HomeContainer">
+        <div className="content">
+          <div className="leftText">
+            <div className="name">BELL</div>
+            <div className="tags">
+              <div className="tag1">Full Stack</div>
               <MaterialIcon
                 icon="circle"
                 color="#343434"
                 size="15px"
-                class="circle"
+                className="circle"
               />
-              <div class="tag2">Software Development</div>
+              <div className="tag2">Software Development</div>
               <MaterialIcon
                 icon="circle"
                 color="#343434"
                 size="15px"
-                class="circle"
+                className="circle"
               />
-              <div class="tag3">UI/UX</div>
+              <div className="tag3">UI/UX</div>
             </div>
           </div>
 
-          <div class="right">
-            <div class="box"></div>
+          <div className="right">
+            <div className="box"></div>
             <img src={headshot} alt="headshot" />
           </div>
         </div>

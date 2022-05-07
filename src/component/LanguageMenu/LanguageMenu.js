@@ -125,6 +125,7 @@ export default function LanguageMenu() {
       >
         {cards}
       </div>
+      <div className="gradient-menu-square"></div>
     </div>
   );
 }
@@ -132,7 +133,7 @@ export default function LanguageMenu() {
 const styles = {
   wheel: {
     position: "absolute",
-    top: "73%",
+    top: "68%",
     right: "-900px",
     transform: "translate( -50%, -50%) rotate(0deg)",
     height: "870px",

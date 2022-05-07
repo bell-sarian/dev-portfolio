@@ -16,6 +16,7 @@
     margin-bottom: 100px;
     z-index: 9999;
 
+    position: fixed;
 }
 
 .menuBarContainer .navLinks {

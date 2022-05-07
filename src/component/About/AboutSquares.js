@@ -17,43 +17,43 @@ WebFont.load({
 export default class About extends Component {
   render() {
     return (
-      <div class="boxContainer">
+      <div className="boxContainer">
         <ReactFloaterJs></ReactFloaterJs>
         <ScrollAnimation delay="5" initiallyVisible={false} animateIn="fadeIn">
-          <div class="box">React</div>
+          <div className="box">React</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">JavaScript</div>
+          <div className="box">JavaScript</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">HTML</div>
+          <div className="box">HTML</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">CSS</div>
+          <div className="box">CSS</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">React Native</div>
+          <div className="box">React Native</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">Python</div>
+          <div className="box">Python</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">C/C++</div>
+          <div className="box">C/C++</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">Java</div>
+          <div className="box">Java</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">PHP</div>
+          <div className="box">PHP</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">SQL</div>
+          <div className="box">SQL</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">x86 Assembly</div>
+          <div className="box">x86 Assembly</div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeIn">
-          <div class="box">GraphQL</div>
+          <div className="box">GraphQL</div>
         </ScrollAnimation>
       </div>
     );

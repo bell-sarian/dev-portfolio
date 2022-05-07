@@ -1,0 +1,108 @@
+.test {
+  font-size: 200px;
+  color: white;
+}
+
+.WorkContainer {
+  font-size: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  padding-bottom: 200px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: hidden;
+  overflow: hidden;
+  margin-top: 300px;
+}
+
+.WorkContainer .WorkTextContainer {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 50%;
+  margin: 100px;
+  margin-right: 350px;
+}
+
+.WorkContainer .WorkTextContainer .WorkText {
+  font-size: 150px;
+  letter-spacing: 0.355em;
+  font-family: "Ramabhadra", sans-serif;
+  color: #efefef;
+  font-weight: 700;
+}
+
+.WorkContainer .WorkTimeline {
+  width: 100%;
+}
+
+.WorkContainer .WorkTimeline .timeline-element-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  /* width: 100vw; */
+  /* border: 1px solid red; */
+  cursor: pointer;
+}
+
+.WorkContainer
+  .WorkTimeline
+  .timeline-element-container
+  .timeline-element-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+}
+
+.WorkContainer
+  .WorkTimeline
+  .timeline-element-container
+  .timeline-element-content
+  .company {
+  font-size: 30px;
+}
+
+.WorkContainer
+  .WorkTimeline
+  .timeline-element-container
+  .timeline-element-content
+  .position {
+  font-size: 18px;
+}
+
+.WorkContainer
+  .WorkTimeline
+  .timeline-element-container
+  .timeline-element-content
+  .skills {
+  font-size: 13px;
+  letter-spacing: 0.2rem;
+}
+
+.WorkContainer
+  .WorkTimeline
+  .timeline-element-container
+  .timeline-element-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /* border: 1px solid red; */
+  /* font-size: 30px; */
+}
+
+.dateContainer
+  .vertical-timeline--two-columns
+  .vertical-timeline-element-content
+  .vertical-timeline-element-date {
+  left: 85%;
+}

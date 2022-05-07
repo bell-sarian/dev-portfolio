@@ -24,6 +24,7 @@ function Card(props) {
   let coord = get_coords(props.radian_interval, props.radius);
   return (
     <div
+      className="card"
       style={{
         ...styles.card,
         left: `${props.center.x + coord.x}px`,
@@ -55,19 +56,21 @@ function Card(props) {
 const styles = {
   card: {
     paddingRight: "250px",
-    // padding: "0",
     position: "absolute",
     top: "200%",
     right: "120%",
     transform: "translate( -50%, -50%) rotate(0deg)",
     height: "100px",
     width: "315px",
-    // backgroundColor: "blue",
     borderRadius: "50%",
-    // display: "flex",
-    // border: "1px solid red",
     overflow: "visible",
-    fontSize: "40px",
+    fontSize: "50px",
+    // "&:hover": {
+    //   backgroundColor: "#efefef",
+    // },
+    // "&:last-child": {
+    //   borderRight: "solid 1px #cccccc",
+    // },
   },
   dot: {
     height: "20px",
