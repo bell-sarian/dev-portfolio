@@ -28,10 +28,14 @@ export default class Work extends Component {
               let content;
               if (index % 2 == 0) {
                 content = (
-                  <div className="timeline-element-container">
+                  <div
+                    className="timeline-element-container"
+                    onClick={(event) => console.log("ITEM CLICKED " + Date())}
+                  >
                     <div className="timeline-element-content">
                       <div className="company ">{item.companyName}</div>
                       <div className="position">{item.position}</div>
+                      <div className="role">{item.roles}</div>
                       <div className="skills">{item.skills}</div>
                     </div>
                     <div className="timeline-element-arrow">
@@ -48,14 +52,18 @@ export default class Work extends Component {
                     <div className="timeline-element-content">
                       <div className="company ">{item.companyName}</div>
                       <div className="position">{item.position}</div>
+                      <div className="role">{item.roles}</div>
                       <div className="skills">{item.skills}</div>
                     </div>
                   </div>
                 );
               }
+
               return (
                 <VerticalTimelineElement
-                  className={"vertical-timeline-element--" + item.id}
+                  className={
+                    "timeline-element vertical-timeline-element--" + item.id
+                  }
                   contentStyle={{
                     background: "transparent",
                     border: "1px solid #D28CCF",
@@ -68,58 +76,23 @@ export default class Work extends Component {
                   date={item.date}
                   dateClassName="dateContainer"
                   iconStyle={{
-                    background: "#D28CCF",
+                    background: item.type == "job" ? "#D28CCF" : "#343434",
                     border: "none",
                     boxShadow: "none",
                     // color: "#fff",
                   }}
                 >
-                  {/* <div className="timeline-element-container">
-                    <div className="timeline-element-content">
-                      <div className="company ">{item.companyName}</div>
-                      <div className="position">{item.position}</div>
-                      <div className="skills">{item.skills}</div>
-                    </div>
-                    <div className="timeline-element-arrow">
-                      <img src="timelineArrow.png" alt="arrow" />
-                    </div>
-                  </div> */}
                   {content}
                 </VerticalTimelineElement>
               );
             })}
 
             <VerticalTimelineElement
-              className="vertical-timeline-element--education"
-              date="2002 - 2006"
               iconStyle={{
                 background: "#343434",
                 color: "#fff",
                 boxShadow: "none",
               }}
-              contentStyle={{
-                background: "transparent",
-                border: "1px solid #D28CCF",
-                color: "#fff",
-                boxShadow: "none",
-              }}
-              //   icon={<SchoolIcon />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Bachelor of Science in Computer Science
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Bachelor Degree
-              </h4>
-              <p>Computer Science</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              iconStyle={{
-                background: "#343434",
-                color: "#fff",
-                boxShadow: "none",
-              }}
-              //   icon={<StarIcon />}
             />
           </VerticalTimeline>
         </div>

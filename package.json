@@ -18,6 +18,7 @@
     "material-icons-react": "^1.0.4",
     "react": "^17.0.2",
     "react-animate-on-scroll": "^2.1.5",
+    "react-chrono": "^1.17.0",
     "react-dom": "^17.0.2",
     "react-floaterjs": "^1.0.6",
     "react-planet": "^1.0.1",

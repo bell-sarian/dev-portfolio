@@ -14,8 +14,10 @@
   justify-content: space-between;
   margin-bottom: 100px;
   padding-bottom: 200px;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   overflow: hidden;
   overflow: hidden;
   margin-top: 300px;
@@ -51,58 +53,48 @@
   /* width: 100vw; */
   /* border: 1px solid red; */
   cursor: pointer;
+  transition: 0.3s;
+
 }
 
-.WorkContainer
-  .WorkTimeline
-  .timeline-element-container
-  .timeline-element-content {
+.WorkContainer .WorkTimeline .timeline-element-container:hover {
+  color: #D28CCF;
+}
+
+.WorkContainer .WorkTimeline .timeline-element-container .timeline-element-content {
   display: flex;
   flex-direction: column;
   justify-content: left;
   text-align: left;
+  padding: 0px 30px;
+  /* max-width: 80%; */
 }
 
-.WorkContainer
-  .WorkTimeline
-  .timeline-element-container
-  .timeline-element-content
-  .company {
+.WorkContainer .WorkTimeline .timeline-element-container .timeline-element-content .company {
   font-size: 30px;
+  font-weight: 700;
 }
 
-.WorkContainer
-  .WorkTimeline
-  .timeline-element-container
-  .timeline-element-content
-  .position {
+.WorkContainer .WorkTimeline .timeline-element-container .timeline-element-content .position {
+  font-size: 23px;
+  /* margin: 10px 0px; */
+}
+
+.WorkContainer .WorkTimeline .timeline-element-container .timeline-element-content .role {
   font-size: 18px;
+  margin: 10px 0px;
 }
 
-.WorkContainer
-  .WorkTimeline
-  .timeline-element-container
-  .timeline-element-content
-  .skills {
-  font-size: 13px;
+.WorkContainer .WorkTimeline .timeline-element-container .timeline-element-content .skills {
+  font-size: 14px;
   letter-spacing: 0.2rem;
 }
 
-.WorkContainer
-  .WorkTimeline
-  .timeline-element-container
-  .timeline-element-arrow {
+.WorkContainer .WorkTimeline .timeline-element-container .timeline-element-arrow {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   /* border: 1px solid red; */
   /* font-size: 30px; */
-}
-
-.dateContainer
-  .vertical-timeline--two-columns
-  .vertical-timeline-element-content
-  .vertical-timeline-element-date {
-  left: 85%;
 }
