@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Styles from "./Home.css";
-import MaterialIcon, { colorPalette } from "material-icons-react";
 import headshot from "../../assets/IMG_4582.JPG";
+
+import CircleIcon from "@mui/icons-material/Circle";
 
 import WebFont from "webfontloader";
 
@@ -20,19 +21,9 @@ export default class Home extends Component {
             <div className="name">BELL</div>
             <div className="tags">
               <div className="tag1">Full Stack</div>
-              <MaterialIcon
-                icon="circle"
-                color="#343434"
-                size="15px"
-                className="circle"
-              />
+              <CircleIcon sx={{ color: "#343434" }} />
               <div className="tag2">Software Development</div>
-              <MaterialIcon
-                icon="circle"
-                color="#343434"
-                size="15px"
-                className="circle"
-              />
+              <CircleIcon sx={{ color: "#343434" }} />
               <div className="tag3">UI/UX</div>
             </div>
           </div>

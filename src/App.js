@@ -6,9 +6,9 @@ import { Switch, Route, Redirect } from "react-router-dom";
 // import Style from "./style/App.css";
 
 import NavBar from "./component/Navigation/NavBar.js";
-import Home from "./component/Home/Home.js";
-import About from "./component/About/About.js";
-import Work from "./component/Work/Work.js";
+import Home from "./view/Home/Home.js";
+import About from "./view/About/About.js";
+import Work from "./view/Work/Work.js";
 
 class App extends Component {
   render() {

@@ -6,7 +6,7 @@ import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import WebFont from "webfontloader";
 import AboutSquares from "./AboutSquares.js";
 
-import LanguageMenu from "../LanguageMenu/LanguageMenu";
+import LanguageMenu from "../../component/LanguageMenu/LanguageMenu";
 
 WebFont.load({
   google: {
