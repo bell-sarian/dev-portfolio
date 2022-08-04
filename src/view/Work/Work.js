@@ -17,6 +17,10 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Button from "@mui/material/Button";
 
+// Icons
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 WebFont.load({
   google: {
     families: ["Ramabhadra", "sans-serif", "Red Hat Text"],
@@ -58,7 +62,9 @@ export default class Work extends Component {
     let work = this.state.selectedWork.skills;
     if (work != undefined && work.length > 0) {
       return work.map((item, index) => (
-        <span key={"work-item-" + index}>{item} </span>
+        <div className="work-dialog-skill" key={"work-item-" + index}>
+          {item}{" "}
+        </div>
       ));
     }
   };
@@ -159,22 +165,46 @@ export default class Work extends Component {
               style: {
                 backgroundColor: "#131313",
                 color: "#fff",
-                border: "#343434",
+                border: "1px solid #D28CCF",
                 minWidth: "30vw",
+                padding: "2%",
               },
             }}
           >
-            <DialogTitle>{selectedWork.companyName}</DialogTitle>
             <DialogContent>
               <div className="work-dialog-container">
-                <div>{selectedWork.position}</div>
-                <div>{selectedWork.roles}</div>
-                {/* <span>Skills: </span> */}
-                {this.workSkills()}
-                <div>{selectedWork.date}</div>
-                <div>{selectedWork.location}</div>
+                <div className="work-dialog-title">
+                  {selectedWork.companyName}
+                </div>
+                <div className="work-dialog-work-location">
+                  <div className="work-dialog-date">
+                    <div className="work-dialog-icon">
+                      <CalendarMonthIcon style={{ fill: "#9a9a9a" }} />
+                    </div>
 
-                {this.workParagraph()}
+                    {selectedWork.date}
+                  </div>
+                  <div className="work-dialog-location">
+                    <div className="work-dialog-icon">
+                      <LocationOnIcon style={{ fill: "#9a9a9a" }} />
+                    </div>
+                    {selectedWork.location}
+                  </div>
+                  <div className="work-dialog-skills-container">
+                    {this.workSkills()}
+                  </div>
+                </div>
+                <hr />
+                <div className="work-dialog-position">
+                  {selectedWork.position}
+                </div>
+
+                <div className="work-dialog-roles">
+                  <span className="work-dialog-key">Key Roles: </span>
+                  {selectedWork.roles}
+                </div>
+
+                <div className="work-dialog-work">{this.workParagraph()}</div>
               </div>
             </DialogContent>
             <DialogActions>
