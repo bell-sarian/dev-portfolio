@@ -208,7 +208,12 @@ export default class Work extends Component {
               </div>
             </DialogContent>
             <DialogActions>
-              <Button onClick={this.handleWorkDialog}>Close</Button>
+              <Button
+                style={{ color: "#D28CCF" }}
+                onClick={this.handleWorkDialog}
+              >
+                Close
+              </Button>
             </DialogActions>
           </Dialog>
         </div>
