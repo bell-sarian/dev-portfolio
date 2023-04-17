@@ -2,6 +2,7 @@
   width: 100%;
   height: 100vh;
   background-color: #131313;
+  padding-top: 200px;
 }
 
 .HomeContainer .content {
@@ -26,6 +27,11 @@
   color: #efefef;
   font-weight: 700;
 }
+
+/* .HomeContainer .content .leftText .name:hover {
+  color: #D28CCF;
+} */
+
 
 .HomeContainer .content .leftText .tags {
   font-size: 24px;
