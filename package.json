@@ -35,7 +35,8 @@
     "react-vertical-timeline-component": "^3.5.2",
     "save": "^2.4.0",
     "web-vitals": "^1.0.1",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
